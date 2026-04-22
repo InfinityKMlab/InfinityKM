@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfinityKM | Preparador Físico Profesional</title>
+    <style>
+        /* ESTILOS GENERALES */
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #121212; color: #f0f0f0; line-height: 1.6; }
+        .container { max-width: 950px; margin: 0 auto; padding: 20px; }
+        h1, h2, h3 { color: #ffffff; }
+        .resaltado { color: #007BFF; }
+        
+        /* CABECERA CON LOGO */
+        header { text-align: center; padding: 40px 20px; background: linear-gradient(180deg, #101010 0%, #1a1a2e 100%); border-bottom: 2px solid #007BFF; }
+        .logo-container { max-width: 220px; margin: 0 auto; }
+        .logo-imagen { width: 100%; height: auto; display: block; }
+        header p { font-size: 1.1em; color: #aaaaaa; margin-top: 15px; }
+
+        /* SECCIONES */
+        section { background-color: #1e1e1e; margin: 30px 0; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        
+        /* BOTONES */
+        .btn { display: inline-block; background-color: #007BFF; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; text-align: center; border: none; cursor: pointer; font-size: 1em; }
+        .btn:hover { background-color: #0056b3; }
+        .btn-insta { background-color: #E1306C; margin-top: 15px; width: 100%; box-sizing: border-box; }
+
+        /* CATEGORÍAS DE PRECIOS */
+        .categoria-titulo { color: #007BFF; border-left: 5px solid #007BFF; padding-left: 15px; margin: 40px 0 20px 0; font-size: 1.5em; text-transform: uppercase; letter-spacing: 1px; }
+        .cuba { color: #25D366; border-left-color: #25D366; }
+
+        /* GRID DE SERVICIOS */
+        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .servicio-card { background-color: #2a2a2a; padding: 25px; border-radius: 12px; border-top: 4px solid #007BFF; text-align: center; transition: transform 0.3s; }
+        .servicio-card:hover { transform: translateY(-5px); }
+        .card-cuba { border-top-color: #25D366; }
+        
+        .precio { font-size: 1.6em; font-weight: bold; color: #fff; margin: 15px 0; }
+        .moneda { font-size: 0.6em; vertical-align: middle; margin-left: 5px; color: #007BFF; }
+        .moneda-cuba { color: #25D366; }
+        
+        .servicio-card ul { text-align: left; padding-left: 15px; color: #cccccc; font-size: 0.95em; }
+        .servicio-card ul li { margin-bottom: 8px; }
+
+        /* FORMULARIO */
+        textarea { width: 100%; height: 120px; padding: 15px; border-radius: 8px; border: 1px solid #444; background-color: #2a2a2a; color: white; box-sizing: border-box; resize: none; font-size: 1em; }
+        .btn-whatsapp { background-color: #25D366; width: 100%; font-size: 1.1em; margin-top: 15px; }
+
+        /* BOTÓN FLOTANTE */
+        .flotante-wa { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="1000086291.jpg" alt="InfinityKM Logo" class="logo-imagen">
+        </div>
+        <p>Preparación Física de Alto Rendimiento</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="sobre-mi">
+            <h2>💪 Sobre mí</h2>
+            <p>¡Hola! Soy tu próximo entrenador personal. Mi misión es ayudarte a construir la mejor versión de ti mismo mediante la <strong>disciplina y la ciencia deportiva</strong>.</p>
+            <p>Diseñaré un plan adaptado 100% a tu estilo de vida, ya sea que busques ganar masa muscular, perder grasa o mejorar tu salud diaria.</p>
+            <a href="https://instagram.com/infinitykm_lab" target="_blank" class="btn btn-insta">📷 Sígueme en Instagram @infinitykm_lab</a>
+        </section>
+
+        <section id="servicios">
+            <h2>📋 Mis Servicios y Planes</h2>
+
+            <div class="categoria-titulo">🌍 Residentes en el Extranjero</div>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <h3>Plan Básico</h3>
+                    <div class="precio">$25 <span class="moneda">USD / mes</span></div>
+                    <ul>
+                        <li>Rutina personalizada (Gym/Casa)</li>
+                        <li>Guía nutricional básica</li>
+                        <li>Revisión cada 15 días</li>
+                    </ul>
+                </div>
+                <div class="servicio-card">
+                    <h3>Plan Pro</h3>
+                    <div class="precio">$45 <span class="moneda">USD / mes</span></div>
+                    <ul>
+                        <li>Plan nutricional detallado (Macros)</li>
+                        <li>Seguimiento por WhatsApp 24/7</li>
+                        <li>Ajustes semanales</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="categoria-titulo cuba">🇨🇺 Residentes en Cuba</div>
+            <div class="servicios-grid">
+                <div class="servicio-card card-cuba">
+                    <h3>Plan Entrenamiento</h3>
+                    <div class="precio">XXXX <span class="moneda moneda-cuba">CUP / mes</span></div>
+                    <ul>
+                        <li>Rutina adaptada a tus recursos</li>
+                        <li>Orientación alimenticia</li>
+                        <li>Seguimiento por WhatsApp</li>
+                    </ul>
+                </div>
+                <div class="servicio-card card-cuba">
+                    <h3>Asesoría Integral</h3>
+                    <div class="precio">XXXX <span class="moneda moneda-cuba">CUP / mes</span></div>
+                    <ul>
+                        <li>Plan de entrenamiento + Dieta</li>
+                        <li>Chequeo de progreso semanal</li>
+                        <li>Atención prioritaria</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>🎯 Cuéntame tus Objetivos</h2>
+            <p>Escribe tu meta (ej: "Quiero ganar músculo", "Bajar de peso") y te contactaré para empezar.</p>
+            <textarea id="texto-objetivo" placeholder="Escribe aquí tus objetivos..."></textarea>
+            <button onclick="enviarMensaje()" class="btn btn-whatsapp">💬 Enviar a mi WhatsApp</button>
+        </section>
+
+    </div>
+
+    <a href="https://wa.me/5350571277?text=Hola,%20tengo%20una%20pregunta." target="_blank" class="flotante-wa">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" width="35" style="filter: brightness(0) invert(1);">
+    </a>
+
+    <script>
+        function enviarMensaje() {
+            const tuNumero = "5350571277"; 
+            const objetivo = document.getElementById('texto-objetivo').value;
+            
+            if (objetivo.trim() === "") {
+                alert("Por favor, escribe tus objetivos.");
+                return;
+            }
+
+            const mensaje = "¡Hola InfinityKM! Estos son mis objetivos: %0A%0A" + encodeURIComponent(objetivo);
+            window.open(`https://wa.me/${tuNumero}?text=${mensaje}`, '_blank');
+        }
+    </script>
+
+</body>
+</html>
+          
