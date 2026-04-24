@@ -3,149 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfinityKM | Preparador Físico Profesional</title>
+    
+    <title>InfinityKM | Sistema de Preparación Física de Alto Rendimiento</title>
+    <meta name="description" content="Optimiza tu velocidad, fuerza y composición corporal con InfinityKM. Entrenamiento basado en evidencia científica fundado por Kevin M. Buch.">
+    
     <style>
-        /* ESTILOS GENERALES */
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #121212; color: #f0f0f0; line-height: 1.6; }
-        .container { max-width: 950px; margin: 0 auto; padding: 20px; }
-        h1, h2, h3 { color: #ffffff; }
-        .resaltado { color: #007BFF; }
-        
-        /* CABECERA CON LOGO */
-        header { text-align: center; padding: 40px 20px; background: linear-gradient(180deg, #101010 0%, #1a1a2e 100%); border-bottom: 2px solid #007BFF; }
-        .logo-container { max-width: 220px; margin: 0 auto; }
-        .logo-imagen { width: 100%; height: auto; display: block; }
-        header p { font-size: 1.1em; color: #aaaaaa; margin-top: 15px; }
+        :root {
+            --bg-color: #0d0d0d;
+            --surface-color: #1a1a1a;
+            --primary-color: #007BFF;
+            --primary-hover: #0056b3;
+            --cuba-color: #25D366;
+            --text-main: #f0f0f0;
+            --text-muted: #aaaaaa;
+        }
 
-        /* SECCIONES */
-        section { background-color: #1e1e1e; margin: 30px 0; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { color: #ffffff; line-height: 1.2; }
+        img { max-width: 100%; height: auto; display: block; border-radius: 12px; }
+
+        /* NAVEGACIÓN */
+        .top-nav { text-align: center; padding: 20px 0; border-bottom: 1px solid #222; background-color: var(--bg-color); }
+        .logo-nav { max-width: 150px; margin: 0 auto; }
+
+        /* HERO SECTION */
+        .hero { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 80px 20px; background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%); border-bottom: 1px solid #333; }
+        .hero-text { flex: 1; }
+        .hero-text h1 { font-size: 3rem; margin-bottom: 15px; }
+        .hero-text h1 span { color: var(--primary-color); }
+        .hero-text p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px; }
+        .hero-img-container { flex: 1; max-width: 450px; }
+
+        /* SOBRE NOSOTROS */
+        section { padding: 80px 0; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 50px; }
+        .section-title span { color: var(--primary-color); }
+
+        .about-grid { display: flex; align-items: center; gap: 50px; background-color: var(--surface-color); padding: 50px; border-radius: 20px; border: 1px solid #222; }
+        .about-text { flex: 1.2; }
+        .about-img { flex: 0.8; }
+        .metodologia-tags { list-style: none; margin: 20px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-weight: bold; font-size: 0.9rem; color: var(--primary-color); }
+
+        /* SERVICIOS */
+        .categoria-titulo { font-size: 1.5rem; font-weight: bold; margin: 40px 0 20px; border-left: 5px solid var(--primary-color); padding-left: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .cuba-title { border-left-color: var(--cuba-color); color: var(--cuba-color); }
+        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .servicio-card { background-color: var(--surface-color); padding: 35px 25px; border-radius: 15px; text-align: center; border: 1px solid #333; position: relative; transition: all 0.3s ease; }
+        .servicio-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
+        .card-pro { border: 2px solid var(--primary-color); }
+        .precio { font-size: 2.5rem; font-weight: bold; margin: 15px 0; }
+        .moneda { font-size: 1rem; color: var(--text-muted); }
+        .servicio-card ul { text-align: left; padding: 0 0 20px 20px; color: var(--text-muted); list-style: "✔  "; }
+        .servicio-card ul li { margin-bottom: 10px; }
+
         /* BOTONES */
-        .btn { display: inline-block; background-color: #007BFF; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; text-align: center; border: none; cursor: pointer; font-size: 1em; }
-        .btn:hover { background-color: #0056b3; }
-        .btn-insta { background-color: #E1306C; margin-top: 15px; width: 100%; box-sizing: border-box; }
+        .btn { display: inline-block; background-color: var(--primary-color); color: white; padding: 14px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; text-align: center; border: none; cursor: pointer; font-size: 1.1rem; width: 100%; }
+        .btn:hover { background-color: var(--primary-hover); transform: scale(1.02); }
+        .btn-insta { background-color: transparent; border: 2px solid #E1306C; margin-top: 20px; width: auto; }
 
-        /* CATEGORÍAS DE PRECIOS */
-        .categoria-titulo { color: #007BFF; border-left: 5px solid #007BFF; padding-left: 15px; margin: 40px 0 20px 0; font-size: 1.5em; text-transform: uppercase; letter-spacing: 1px; }
-        .cuba { color: #25D366; border-left-color: #25D366; }
-
-        /* GRID DE SERVICIOS */
-        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .servicio-card { background-color: #2a2a2a; padding: 25px; border-radius: 12px; border-top: 4px solid #007BFF; text-align: center; transition: transform 0.3s; }
-        .servicio-card:hover { transform: translateY(-5px); }
-        .card-cuba { border-top-color: #25D366; }
-        
-        .precio { font-size: 1.6em; font-weight: bold; color: #fff; margin: 15px 0; }
-        .moneda { font-size: 0.6em; vertical-align: middle; margin-left: 5px; color: #007BFF; }
-        .moneda-cuba { color: #25D366; }
-        
-        .servicio-card ul { text-align: left; padding-left: 15px; color: #cccccc; font-size: 0.95em; }
-        .servicio-card ul li { margin-bottom: 8px; }
-
-        /* FORMULARIO */
-        textarea { width: 100%; height: 120px; padding: 15px; border-radius: 8px; border: 1px solid #444; background-color: #2a2a2a; color: white; box-sizing: border-box; resize: none; font-size: 1em; }
-        .btn-whatsapp { background-color: #25D366; width: 100%; font-size: 1.1em; margin-top: 15px; }
+        /* CONTACTO */
+        .contacto-box { background-color: var(--surface-color); padding: 40px; border-radius: 20px; max-width: 800px; margin: 0 auto; text-align: center; border: 1px solid #333; }
+        .plan-badge { display: inline-block; padding: 5px 15px; border-radius: 20px; background: #333; font-size: 0.9rem; margin-bottom: 15px; color: var(--primary-color); font-weight: bold; border: 1px solid var(--primary-color); }
+        textarea { width: 100%; height: 120px; padding: 15px; margin: 20px 0; border-radius: 8px; border: 1px solid #444; background-color: #0d0d0d; color: white; font-family: inherit; font-size: 1rem; }
+        .btn-wa-form { background-color: var(--cuba-color); }
+        .btn-wa-form:hover { background-color: #1eb954; }
 
         /* BOTÓN FLOTANTE */
-        .flotante-wa { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; }
+        .flotante-wa { position: fixed; bottom: 30px; right: 30px; background-color: var(--cuba-color); width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; transition: 0.3s; }
+        .flotante-wa:hover { transform: scale(1.1); }
+
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid #222; }
+
+        @media (max-width: 768px) {
+            .hero, .about-grid { flex-direction: column; text-align: center; }
+            .hero-text h1 { font-size: 2.4rem; }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="1776823780854.jpg" alt="InfinityKM Logo" class="logo-imagen">
+    <nav class="top-nav">
+        <img src="1776823780854.jpg" alt="InfinityKM Logo" class="logo-nav">
+    </nav>
+
+    <header class="hero container">
+        <div class="hero-text">
+            <h1>Maximiza tu <span>Rendimiento Real</span></h1>
+            <p>Preparación física basada en ciencia para atletas y personas comprometidas con la excelencia física.</p>
+            <a href="#servicios" class="btn" style="width: auto;">Ver Planes y Servicios</a>
         </div>
-        <p>Preparación Física de Alto Rendimiento</p>
+        <div class="hero-img-container">
+            <img src="FOTO_HERO_IA.jpg" alt="Kevin M. Buch - InfinityKM" loading="lazy">
+        </div>
     </header>
 
-    <div class="container">
+    <main class="container">
         
-        <section id="sobre-mi">
-            <h2>💪 Sobre mí</h2>
-            <p>¡Hola! Soy tu próximo entrenador personal. Mi misión es ayudarte a construir la mejor versión de tí mismo mediante la <strong>disciplina y la ciencia deportiva</strong>.</p>
-            <p>Diseñaré un plan adaptado 100% a tu estilo de vida y experiencia previa, ya sea que busques aumentar tu rendimiento deportivo, ganar masa muscular, perder grasa o mejorar tu salud diaria.</p>
-            <a href="https://instagram.com/infinitykm_lab" target="_blank" class="btn btn-insta">📷 Sígueme en Instagram @infinitykm_lab</a>
+        <section id="sobre-nosotros">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="FOTO_SISTEMA_IA.jpg" alt="Metodología InfinityKM" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h2 style="font-size: 0.9rem; text-transform: uppercase; color: var(--primary-color); letter-spacing: 2px; margin-bottom: 10px;">Sobre Nosotros | El Sistema</h2>
+                    <h3>InfinityKM: Ciencia aplicada al <span>Rendimiento</span></h3>
+                    <br>
+                    <p>En <strong>InfinityKM</strong> ayudamos a atletas y personas comprometidas a mejorar su velocidad, fuerza y composición corporal mediante un enfoque basado en evidencia científica.</p>
+                    <p>Fundado por <strong>Kevin M. Buch</strong>, nuestro sistema combina ciencia, práctica y resultados medibles.</p>
+                    <ul class="metodologia-tags">
+                        <li>⚡ Optimización de Vmax</li>
+                        <li>📊 Datos y Progresión</li>
+                        <li>💪 Hipertrofia Funcional</li>
+                        <li>🎯 Precisión Científica</li>
+                    </ul>
+                    <a href="https://instagram.com/infinitykm_lab" target="_blank" class="btn btn-insta">📷 Nuestro Laboratorio en Instagram</a>
+                </div>
+            </div>
         </section>
 
         <section id="servicios">
-            <h2>📋 Mis Servicios y Planes</h2>
+            <h2 class="section-title">Nuestros <span>Planes</span></h2>
 
-            <div class="categoria-titulo">🌍 Residentes en el Extranjero</div>
+            <div class="categoria-titulo">🌍 Internacional</div>
             <div class="servicios-grid">
                 <div class="servicio-card">
                     <h3>Plan Básico</h3>
                     <div class="precio">$10 <span class="moneda">USD / mes</span></div>
                     <ul>
-                        <li>Rutina personalizada (Gym/Casa)</li>
+                        <li>Rutina personalizada</li>
                         <li>Guía nutricional básica</li>
                         <li>Revisión cada 15 días</li>
                     </ul>
+                    <button onclick="seleccionarPlan('Plan Básico Internacional')" class="btn">Empezar</button>
                 </div>
-                <div class="servicio-card">
+                <div class="servicio-card card-pro">
                     <h3>Plan Pro</h3>
                     <div class="precio">$20 <span class="moneda">USD / mes</span></div>
                     <ul>
-                        <li>Plan de Entrenamiento Personalizado</li>
-                        <li>Plan nutricional detallado (Macros)</li>
-                        <li>Seguimiento diario por WhatsApp</li>
-                        <li>Chequeo de progreso semanal</li>
+                        <li>Plan de Entrenamiento Élite</li>
+                        <li>Plan nutricional (Macros)</li>
+                        <li>Seguimiento diario WhatsApp</li>
+                        <li>Chequeo semanal de progreso</li>
                     </ul>
+                    <button onclick="seleccionarPlan('Plan Pro Internacional')" class="btn">Elegir Pro</button>
                 </div>
             </div>
 
-            <div class="categoria-titulo cuba">🇨🇺 Residentes en Cuba</div>
+            <div class="categoria-titulo cuba-title">🇨🇺 Residentes en Cuba</div>
             <div class="servicios-grid">
-                <div class="servicio-card card-cuba">
+                <div class="servicio-card">
                     <h3>Plan Básico</h3>
-                    <div class="precio">500 <span class="moneda moneda-cuba">CUP / mes</span></div>
+                    <div class="precio">500 <span class="moneda">CUP / mes</span></div>
                     <ul>
-                        <li>Rutina personalizada (Gym/Casa)</li>
-                        <li>Guía nutricional básica</li>
-                        <li>Revisión cada 15 días</li>
+                        <li>Rutina personalizada</li>
+                        <li>Guía nutricional</li>
+                        <li>Revisión quincenal</li>
                     </ul>
+                    <button onclick="seleccionarPlan('Plan Básico Cuba')" class="btn" style="background-color:#333">Empezar</button>
                 </div>
-                <div class="servicio-card card-cuba">
-                    <h3>Plan Pro</h3>
-                    <div class="precio">1500 <span class="moneda moneda-cuba">CUP / mes</span></div>
+                <div class="servicio-card card-pro" style="border-color: var(--cuba-color);">
+                    <h3>Plan Pro Presencial</h3>
+                    <div class="precio">1500 <span class="moneda">CUP / mes</span></div>
                     <ul>
-                        <li>Plan de entrenamiento personalizado</li>
-                      <li>Plan nutricional detallado (Macros)</li>
-                        <li>Chequeo de progreso semanal</li>
-                        <li>Derecho a una sesión presencial</li>
+                        <li>Plan personalizado completo</li>
+                        <li>Seguimiento semanal</li>
+                        <li><strong>1 Sesión presencial incluida</strong></li>
                     </ul>
+                    <button onclick="seleccionarPlan('Plan Pro Presencial Cuba')" class="btn" style="background-color: var(--cuba-color)">Elegir Pro</button>
                 </div>
             </div>
         </section>
 
         <section id="contacto">
-            <h2>🎯 Cuéntame tus Objetivos</h2>
-            <p>Escribe tu meta (ej: "Quiero ganar músculo", "Prepararme para un evento x") y te contactaré para empezar.</p>
-            <textarea id="texto-objetivo" placeholder="Escribe aquí tus objetivos..."></textarea>
-            <button onclick="enviarMensaje()" class="btn btn-whatsapp">💬 Enviar a mi WhatsApp</button>
+            <div class="contacto-box">
+                <div id="plan-display" class="plan-badge">Interesado en: Información General</div>
+                <h2>🎯 Cuéntame tus Objetivos</h2>
+                <p>Escribe tu meta abajo y te contactaré para iniciar tu transformación.</p>
+                <textarea id="texto-objetivo" placeholder="Ej: Quiero mejorar mi velocidad y ganar masa muscular..."></textarea>
+                <button onclick="enviarMensaje()" class="btn btn-wa-form">💬 Enviar a mi WhatsApp</button>
+            </div>
         </section>
 
-    </div>
+    </main>
 
-    <a href="https://wa.me/5350571277?text=Hola,%20tengo%20una%20pregunta." target="_blank" class="flotante-wa">
+    <footer>
+        <p>&copy; 2026 InfinityKM | Fundado por Kevin M. Buch. Todos los derechos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/5350571277" target="_blank" class="flotante-wa">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" width="35" style="filter: brightness(0) invert(1);">
     </a>
 
     <script>
+        let planSeleccionado = "Información General";
+
+        function seleccionarPlan(nombre) {
+            planSeleccionado = nombre;
+            // Actualizar el badge visual
+            document.getElementById('plan-display').innerText = "Interesado en: " + nombre;
+            // Scroll suave al formulario
+            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+            // Poner el foco en el textarea
+            document.getElementById('texto-objetivo').focus();
+        }
+
         function enviarMensaje() {
             const tuNumero = "5350571277"; 
             const objetivo = document.getElementById('texto-objetivo').value;
             
             if (objetivo.trim() === "") {
-                alert("Por favor, escribe tus objetivos.");
+                alert("Por favor, cuéntame tus metas para poder ayudarte.");
                 return;
             }
 
-            const mensaje = "¡Hola InfinityKM! Estos son mis objetivos: %0A%0A" + encodeURIComponent(objetivo);
+            const mensaje = `¡Hola InfinityKM! 🚀%0A%0AMe interesa el: *${planSeleccionado}*%0A%0AMis objetivos son:%0A${encodeURIComponent(objetivo)}`;
             window.open(`https://wa.me/${tuNumero}?text=${mensaje}`, '_blank');
         }
     </script>
 
 </body>
 </html>
-          
