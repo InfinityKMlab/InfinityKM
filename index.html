@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>InfinityKM | Sistema de Preparación Física de Alto Rendimiento</title>
-    <meta name="description" content="Optimiza tu velocidad, fuerza y composición corporal con InfinityKM. Entrenamiento basado en evidencia científica fundado por Kevin M. Buch.">
+    <title>InfinityKM | Método Híbrido de Alto Rendimiento</title>
+    <meta name="description" content="Rompe el mito del fitness tradicional. Optimiza fuerza, potencia y composición corporal con el método híbrido basado en ciencia de InfinityKM.">
     
     <link rel="icon" type="image/jpg" href="favicon.jpg"> 
     <link rel="apple-touch-icon" href="favicon.png"> 
 
-    <meta property="og:title" content="InfinityKM | Preparación Física">
+    <meta property="og:title" content="InfinityKM | Método Híbrido de Alto Rendimiento">
     <meta property="og:description" content="Entrenamiento basado en evidencia científica fundado por Kevin M. Buch.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://InfinityKMlab.github.io/InfinityKM/1000094247.jpg">
@@ -25,6 +25,8 @@
             --cuba-color: #25D366;
             --text-main: #f0f0f0;
             --text-muted: #aaaaaa;
+            --border-color: #333;
+            --card-hover-border: var(--primary-color);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -37,7 +39,7 @@
         .top-nav { text-align: center; padding: 20px 0; border-bottom: 1px solid #222; background-color: var(--bg-color); }
         .logo-nav { max-width: 150px; margin: 0 auto; }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 80px 20px; background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%); border-bottom: 1px solid #333; }
         .hero-text { flex: 1; }
         .hero-text h1 { font-size: 3rem; margin-bottom: 15px; }
@@ -45,15 +47,41 @@
         .hero-text p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px; }
         .hero-img-container { flex: 1; max-width: 450px; }
 
-        /* SOBRE NOSOTROS */
+        /* SECCIONES GENERALES */
         section { padding: 80px 0; }
         .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 50px; }
         .section-title span { color: var(--primary-color); }
+        .section-subtitle { text-align: center; color: var(--text-muted); max-width: 700px; margin: -30px auto 40px; font-size: 1.1rem; }
 
+        /* SOBRE NOSOTROS */
         .about-grid { display: flex; align-items: center; gap: 50px; background-color: var(--surface-color); padding: 50px; border-radius: 20px; border: 1px solid #222; }
         .about-text { flex: 1.2; }
         .about-img { flex: 0.8; }
         .metodologia-tags { list-style: none; margin: 20px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-weight: bold; font-size: 0.9rem; color: var(--primary-color); }
+
+        /* NUEVA SECCIÓN: GANCHO METODOLOGÍA HÍBRIDA */
+        .hybrid-hook { background-color: var(--surface-color); border: 1px solid var(--border-color); border-left: 5px solid var(--primary-color); padding: 40px; border-radius: 0 15px 15px 0; margin-bottom: 60px; }
+        .hybrid-hook h2 { font-size: 2rem; margin-bottom: 20px; }
+        .hybrid-hook p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 15px; }
+        .hybrid-hook .highlight { color: var(--primary-color); font-weight: bold; }
+
+        /* NUEVA SECCIÓN: SEGMENTACIÓN DUAL */
+        .dual-segment { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 60px; }
+        .segment-card { background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 15px; padding: 40px 30px; text-align: left; transition: all 0.3s ease; }
+        .segment-card:hover { border-color: var(--primary-color); transform: translateY(-5px); }
+        .segment-card .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+        .segment-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .segment-card p { color: var(--text-muted); }
+        .segment-card.athlete { border-top: 4px solid var(--primary-color); }
+        .segment-card.committed { border-top: 4px solid #ff9800; }
+
+        /* NUEVA SECCIÓN: QUÉ INCLUYE */
+        .includes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
+        .include-card { background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 15px; padding: 30px; text-align: left; transition: all 0.3s ease; }
+        .include-card:hover { border-color: var(--primary-color); transform: translateY(-5px); }
+        .include-card .icon { font-size: 2.2rem; margin-bottom: 15px; display: block; }
+        .include-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: #fff; }
+        .include-card p { color: var(--text-muted); font-size: 0.95rem; }
 
         /* SERVICIOS */
         .categoria-titulo { font-size: 1.5rem; font-weight: bold; margin: 40px 0 20px; border-left: 5px solid var(--primary-color); padding-left: 15px; text-transform: uppercase; letter-spacing: 1px; }
@@ -70,24 +98,28 @@
         /* BOTONES */
         .btn { display: inline-block; background-color: var(--primary-color); color: white; padding: 14px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; text-align: center; border: none; cursor: pointer; font-size: 1.1rem; width: 100%; }
         .btn:hover { background-color: var(--primary-hover); transform: scale(1.02); }
-        .btn-insta { background-color: transparent; border: 2px solid #E1306C; margin-top: 20px; width: auto; }
+        .btn-insta { background-color: transparent; border: 2px solid #E1306C; margin-top: 20px; width: auto; display: inline-flex; align-items: center; gap: 8px; }
 
         /* CONTACTO */
         .contacto-box { background-color: var(--surface-color); padding: 40px; border-radius: 20px; max-width: 800px; margin: 0 auto; text-align: center; border: 1px solid #333; }
         .plan-badge { display: inline-block; padding: 5px 15px; border-radius: 20px; background: #333; font-size: 0.9rem; margin-bottom: 15px; color: var(--primary-color); font-weight: bold; border: 1px solid var(--primary-color); }
-        textarea { width: 100%; height: 120px; padding: 15px; margin: 20px 0; border-radius: 8px; border: 1px solid #444; background-color: #0d0d0d; color: white; font-family: inherit; font-size: 1rem; }
+        textarea { width: 100%; height: 120px; padding: 15px; margin: 20px 0; border-radius: 8px; border: 1px solid #444; background-color: #0d0d0d; color: white; font-family: inherit; font-size: 1rem; resize: vertical; }
         .btn-wa-form { background-color: var(--cuba-color); }
         .btn-wa-form:hover { background-color: #1eb954; }
 
         /* BOTÓN FLOTANTE */
-        .flotante-wa { position: fixed; bottom: 30px; right: 30px; background-color: var(--cuba-color); width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; transition: 0.3s; }
+        .flotante-wa { position: fixed; bottom: 30px; right: 30px; background-color: var(--cuba-color); width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
         .flotante-wa:hover { transform: scale(1.1); }
 
         footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid #222; }
 
         @media (max-width: 768px) {
-            .hero, .about-grid { flex-direction: column; text-align: center; }
+            .hero, .about-grid, .dual-segment { flex-direction: column; text-align: center; }
             .hero-text h1 { font-size: 2.4rem; }
+            .dual-segment { grid-template-columns: 1fr; }
+            .metodologia-tags { grid-template-columns: 1fr; }
+            .about-grid { padding: 30px; }
+            .hybrid-hook { padding: 25px; }
         }
     </style>
 </head>
@@ -100,7 +132,7 @@
     <header class="hero container">
         <div class="hero-text">
             <h1>Maximiza tu <span>Rendimiento Real</span></h1>
-            <p>Preparación física basada en ciencia para atletas y personas comprometidas con la excelencia física.</p>
+            <p>Preparación física híbrida basada en ciencia para atletas y personas comprometidas con la excelencia física.</p>
             <a href="#servicios" class="btn" style="width: auto;">Ver Planes y Servicios</a>
         </div>
         <div class="hero-img-container">
@@ -110,6 +142,7 @@
 
     <main class="container">
         
+        <!-- SOBRE NOSOTROS (mantenido como estaba) -->
         <section id="sobre-nosotros">
             <div class="about-grid">
                 <div class="about-img">
@@ -132,6 +165,62 @@
             </div>
         </section>
 
+        <!-- NUEVO: GANCHO DE LA METODOLOGÍA HÍBRIDA -->
+        <section id="metodo-hibrido">
+            <h2 class="section-title">El <span>Mito</span> Que Te Está Estancando</h2>
+            <div class="hybrid-hook">
+                <p>¿Te han dicho que tienes que elegir entre <strong>levantar pesado</strong>, <strong>correr rápido</strong> o <strong>verte bien en el espejo</strong>? El fitness tradicional te obliga a encasillarte.</p>
+                <p>En <span class="highlight">InfinityKM rompemos esa regla</span>. Aplicamos un <strong>método híbrido</strong> fundamentado en la ciencia del deporte que optimiza tu fuerza, tu potencia y tu composición corporal <strong>al mismo tiempo</strong>. No entrenamos para acumular fatiga; entrenamos para generar <span class="highlight">adaptaciones reales</span>.</p>
+                <p><em>Lo que no se mide, no se mejora.</em> Cada repetición, cada porcentaje de intensidad y cada variable de tu plan está calculada matemáticamente para asegurar tu progreso semana a semana.</p>
+            </div>
+        </section>
+
+        <!-- NUEVO: SEGMENTACIÓN DUAL -->
+        <section id="para-quien">
+            <h2 class="section-title">Diseñado para la <span>Excelencia</span></h2>
+            <p class="section-subtitle">¿Cuál es tu objetivo? Encuentra el camino que se adapta a ti.</p>
+            <div class="dual-segment">
+                <div class="segment-card athlete">
+                    <span class="icon">🏆</span>
+                    <h3>El Atleta / Competidor</h3>
+                    <p>Buscas dar el salto de calidad en tu disciplina. Quieres transferir la fuerza del gimnasio al terreno de juego, mejorar tu aceleración, tu potencia vertical y tu resistencia a la fatiga mediante una periodización científica. Aquí medimos cada vatio y cada centímetro de salto.</p>
+                </div>
+                <div class="segment-card committed">
+                    <span class="icon">💎</span>
+                    <h3>La Persona Comprometida</h3>
+                    <p>No compites en una liga profesional, pero te tomas tu cuerpo en serio. Buscas perder grasa, ganar masa muscular y construir un físico atlético, fuerte y funcional que mantenga su rendimiento en el día a día. Tu compromiso es tu mayor ventaja competitiva.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVO: QUÉ INCLUYE LA ASESORÍA -->
+        <section id="que-incluye">
+            <h2 class="section-title">Un Sistema <span>Inteligente</span> Enfocado en Resultados</h2>
+            <div class="includes-grid">
+                <div class="include-card">
+                    <span class="icon">📋</span>
+                    <h3>Planificación Híbrida Personalizada</h3>
+                    <p>Rutinas estructuradas bajo métodos avanzados de periodización (DUP, RAMP, Karvonen) adaptadas a tu nivel, tus horarios y el material del que dispones.</p>
+                </div>
+                <div class="include-card">
+                    <span class="icon">🥗</span>
+                    <h3>Optimización de Composición Corporal</h3>
+                    <p>Estrategia nutricional flexible basada en la ciencia, sin pasar hambre ni prohibir alimentos, alineada al 100% con tu gasto energético y tus metas estéticas.</p>
+                </div>
+                <div class="include-card">
+                    <span class="icon">📊</span>
+                    <h3>Control Métrico de Progreso</h3>
+                    <p>Acceso a nuestra plataforma donde registramos cada carga, volumen de entrenamiento y proximidad al fallo (RIR/RPE). Si se mide, progresa.</p>
+                </div>
+                <div class="include-card">
+                    <span class="icon">🔄</span>
+                    <h3>Feedback y Ajustes Semanales</h3>
+                    <p>Análisis de tu progreso y corrección técnica mediante video para asegurar la máxima tensión mecánica y la ejecución perfecta en cada levantamiento.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS Y PLANES (original) -->
         <section id="servicios">
             <h2 class="section-title">Nuestros <span>Planes</span></h2>
 
@@ -186,12 +275,13 @@
             </div>
         </section>
 
+        <!-- CONTACTO -->
         <section id="contacto">
             <div class="contacto-box">
                 <div id="plan-display" class="plan-badge">Interesado en: Información General</div>
                 <h2>🎯 Cuéntame tus Objetivos</h2>
                 <p>Escribe tu meta abajo y te contactaré para iniciar tu transformación.</p>
-                <textarea id="texto-objetivo" placeholder="Ej: Quiero mejorar mi velocidad y ganar masa muscular..."></textarea>
+                <textarea id="texto-objetivo" placeholder="Ej: Quiero mejorar mi velocidad, perder grasa y ganar músculo funcional..."></textarea>
                 <button onclick="enviarMensaje()" class="btn btn-wa-form">💬 Enviar a mi WhatsApp</button>
             </div>
         </section>
@@ -202,7 +292,7 @@
         <p>&copy; 2026 InfinityKM | Fundado por Kevin M. Buch. Todos los derechos reservados.</p>
     </footer>
 
-    <a href="https://wa.me/5350571277" target="_blank" class="flotante-wa">
+    <a href="https://wa.me/5350571277" target="_blank" class="flotante-wa" aria-label="Chatea por WhatsApp">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" width="35" style="filter: brightness(0) invert(1);">
     </a>
 
@@ -211,11 +301,8 @@
 
         function seleccionarPlan(nombre) {
             planSeleccionado = nombre;
-            // Actualizar el badge visual
             document.getElementById('plan-display').innerText = "Interesado en: " + nombre;
-            // Scroll suave al formulario
             document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
-            // Poner el foco en el textarea
             document.getElementById('texto-objetivo').focus();
         }
 
